@@ -18,27 +18,27 @@ public class InputHandeler : MonoBehaviour
 
 	public void PlayerInput()
 	{
-		if(Input.GetKeyDown(KeyCode.W))
+		if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
 		{
 			m_player.GetComponent<PlayerController>().MoveForward();
 		}
 
-		if (Input.GetKeyDown(KeyCode.A))
+		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 		{
 			m_player.GetComponent<PlayerController>().MoveLeft();
 		}
 
-		if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
 		{
 			m_player.GetComponent<PlayerController>().MoveBack();
 		}
 
-		if (Input.GetKeyDown(KeyCode.D))
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
 			m_player.GetComponent<PlayerController>().MoveRight();
 		}
 
-		if(Input.GetMouseButtonDown(0))
+		if(Input.GetMouseButton(0))
 		{
 			m_player.GetComponent<PlayerController>().Shoot(Input.mousePosition);
 		}
